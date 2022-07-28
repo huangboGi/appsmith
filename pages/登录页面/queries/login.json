@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "api2",
+    "name": "login",
     "datasource": {
       "name": "api2",
       "pluginId": "restapi-plugin",
@@ -17,8 +17,21 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/code",
-      "headers": [],
+      "path": "/auth/login",
+      "headers": [
+        {
+          "key": "code",
+          "value": "{{Input3.text}}"
+        },
+        {
+          "key": "username",
+          "value": "{{Input1.text}}"
+        },
+        {
+          "key": "password",
+          "value": "{{Input2.text}}"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [],
       "bodyFormData": [],
@@ -32,18 +45,32 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[0].value"
+      },
+      {
+        "key": "headers[1].value"
+      },
+      {
+        "key": "headers[2].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Input1.text",
+      "Input2.text",
+      "Input3.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "登录页面_api2",
+  "id": "登录页面_login",
   "deleted": false,
-  "gitSyncId": "62e0f43dc5006f47bdeb9ff3_62e23aedc5006f47bdeba084"
+  "gitSyncId": "62e0f43dc5006f47bdeb9ff3_62e25348c5006f47bdeba08b"
 }
