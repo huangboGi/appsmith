@@ -362,7 +362,7 @@
                       "rightColumn": 55,
                       "objectFit": "contain",
                       "widgetId": "b5v41j4daz",
-                      "isVisible": false,
+                      "isVisible": true,
                       "version": 1,
                       "parentId": "zn63fv8e28",
                       "renderMode": "CANVAS",
