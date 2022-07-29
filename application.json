@@ -11,6 +11,10 @@
     {
       "id": "登录页面",
       "isDefault": false
+    },
+    {
+      "id": "营销报告",
+      "isDefault": false
     }
   ],
   "viewMode": false,

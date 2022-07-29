@@ -32,8 +32,8 @@
           "value": "{{Input2.text}}"
         },
         {
-          "key": "content-type",
-          "value": "application/json"
+          "key": "uuid",
+          "value": "{{code.data.uuid}}"
         }
       ],
       "encodeParamsToggle": true,
@@ -60,6 +60,9 @@
       },
       {
         "key": "headers[2].value"
+      },
+      {
+        "key": "headers[3].value"
       }
     ],
     "isValid": true,
@@ -68,7 +71,8 @@
     "jsonPathKeys": [
       "Input1.text",
       "Input2.text",
-      "Input3.text"
+      "Input3.text",
+      "code.data.uuid"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
